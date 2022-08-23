@@ -12,7 +12,7 @@ type SetProp = {
 }
 
 export default function Movies ({setId}: SetProp) {
-    const KEY = '9d18350631eeadf29995e4a5bca1d96e'
+    const KEY = '[YOUR API KEY]'
     const URL = `https://api.themoviedb.org/3/movie/popular?api_key=${KEY}&language=en-US&page=1`
     const {loading, get,error} = useFetch(URL)
     const [movies, setMovies] = useState<Movie[]>();
