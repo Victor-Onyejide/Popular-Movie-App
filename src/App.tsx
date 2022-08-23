@@ -1,25 +1,36 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
+import Details from './components/Details';
+import Movies from './components/Movies';
+
+interface Movie {
+  id:number,
+  backdrop_path:string
+}
 
 function App() {
+
+  const [id, setId] = useState<number>();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+          <main>
+            <Routes>
+              <Route 
+                path="/"
+                element={<Movies setId={setId}/>}
+              />
+              <Route 
+                path="/details"
+                element={<Details id={id}/>}
+              />
+            </Routes>
+          </main>
+      </div>
+    </BrowserRouter>
+    
   );
 }
 
