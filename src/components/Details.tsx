@@ -18,7 +18,7 @@ export default function Details ({id}:SetProp) {
 
     const [details, setDetails] = useState<Details>()
 
-    const KEY = '9d18350631eeadf29995e4a5bca1d96e'
+    const KEY = '[YOUR API KEY]'
 
     const URL = `https://api.themoviedb.org/3/movie/${id}?api_key=${KEY}&language=en-U`
 
