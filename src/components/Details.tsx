@@ -72,7 +72,7 @@ export default function Details ({id}:SetProp) {
                 <div className='detail'>
 
                     <div className='img'>
-                        <img src={`https://image.tmdb.org/t/p/original/${details?.poster_path}`}/>
+                        <img src={`https://image.tmdb.org/t/p/w185/${details?.poster_path}`}/>
                     </div>
 
                     <div className='content-detail'>
