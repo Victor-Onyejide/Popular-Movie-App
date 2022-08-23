@@ -48,7 +48,7 @@ export default function Movies ({setId}: SetProp) {
             <div className='pop-movies'>
                 {movies && movies.map((movie)=> <div className='movie' key={movie.id} >
                     <Link to='/details' onClick={() => setId(movie.id)} >
-                        <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}/>
+                        <img src={`https://image.tmdb.org/t/p/w185/${movie.poster_path}`}/>
                     </Link>
                     </div>)}
 
